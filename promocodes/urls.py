@@ -4,5 +4,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index)
+    path('', views.balance_view),
+    path('promo/', views.PromocodeList.as_view())
 ]
