@@ -22,7 +22,8 @@ def create_promocodes(count:int, prefix:str, amount:int):
     for i in range(count):
         queryset.append(
             Promocode.objects.create(
-                code=generate_code(prefix)
+                code=generate_code(prefix),
+                amount=amount
             )
         )
     return queryset

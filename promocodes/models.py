@@ -10,6 +10,7 @@ class Balance(models.Model):
 
 class Promocode(models.Model):
     code = models.CharField(max_length=10, unique=True)
-    
+    amount = models.PositiveIntegerField()
+
     def __str__(self):
         return self.code
